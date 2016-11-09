@@ -1,4 +1,4 @@
-package mansonheart.com.designpatternsissues.issue1
+package mansonheart.com.designpatternsissues.data
 
 /**
  * Created by alexandr on 09.11.16.

@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import mansonheart.com.designpatternsissues.issue1.RemoteDataSource
-import mansonheart.com.designpatternsissues.issue1.RequestType
+import mansonheart.com.designpatternsissues.data.RemoteDataSource
+import mansonheart.com.designpatternsissues.data.RequestType
 
 class MainActivity : AppCompatActivity() {
 
