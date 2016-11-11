@@ -7,8 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import mansonheart.com.designpatternsissues.data.RemoteDataSource
-import mansonheart.com.designpatternsissues.data.RequestType
+import mansonheart.com.designpatternsissues.data.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,12 +20,7 @@ class MainActivity : AppCompatActivity() {
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {
             view ->
-            val response = RemoteDataSource().getData(RequestType.GET,
-                    "http://url.com",
-                    null,
-                    null,
-                    mapOf(Pair("Content-Type", "application/json; charset=UTF-8"))
-            )
+            val response = Repository().getData(Request(entityClazz = "User"), DataSourceType.LOCAL)
             Snackbar.make(view, response.toString(), Snackbar.LENGTH_LONG).setAction("Action", null).show()
         }
     }
